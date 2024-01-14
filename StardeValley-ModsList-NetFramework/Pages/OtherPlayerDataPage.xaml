@@ -1,0 +1,32 @@
+﻿<Page x:Class="StardewValleyModList.Pages.OtherPlayerModsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StardewValleyModList.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="OtherPlayerDataPage">
+
+    <Grid>
+        <Button x:Name="button_SelectOtherPlayerDataPath" Content="Select Other Player Data" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Width="200" FontSize="15"/>
+        <TextBox x:Name="textbox_OtherPlayerDataPath" IsEnabled="False" Margin="10,41,10,0" TextWrapping="Wrap" Text="JSON Path" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="30" FontSize="15"/>
+        <DataGrid Margin="10,76,10,10">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="FontWeight" Value="Medium"/>
+                    <Setter Property="BorderThickness" Value="0,0,1,2"/>
+
+                </Style>
+            </DataGrid.Resources>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mod Name" Width="100" CanUserSort="True" CanUserResize="True"/>
+                <DataGridTextColumn Header="Author" Width="100" CanUserSort="True" CanUserResize="True"/>
+                <DataGridTextColumn Header="Description" Width="250" CanUserSort="True" CanUserResize="True"/>
+                <DataGridTextColumn Header="Minimum Version" Width="120" CanUserSort="True" CanUserResize="True"/>
+                <DataGridTextColumn Header="SMAPI Link" Width="*" CanUserSort="True" CanUserResize="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

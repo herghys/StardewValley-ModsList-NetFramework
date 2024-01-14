@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace StardeValley_ModsList_NetFramework
+namespace StardewValleyModList.Pages
 {
     /// <summary>
-    /// Interaction logic for OtherPlayerData.xaml
+    /// Interaction logic for OtherPlayerDataPage.xaml
     /// </summary>
-    public partial class OtherPlayerData : Page
+    public partial class OtherPlayerModsPage : Page
     {
-        public OtherPlayerData()
+        public OtherPlayerModsPage()
         {
             InitializeComponent();
         }

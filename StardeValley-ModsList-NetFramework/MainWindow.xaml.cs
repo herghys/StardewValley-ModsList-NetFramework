@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StardewValleyModList.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +14,30 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace StardeValley_ModsList_NetFramework
+namespace StardewValleyModList
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        MyModsPage myModsPage = new MyModsPage();
+        OtherPlayerModsPage otherPlayerModsPage = new OtherPlayerModsPage();
+
         public MainWindow()
         {
             InitializeComponent();
+            OpenMyModsPage();
+        }
+
+        private void OpenMyModsPage()
+        {
+            MainContent.Content = myModsPage;
+        }
+
+        private void OpenOtherPage()
+        {
+            MainContent.Content = otherPlayerModsPage;
         }
     }
 }

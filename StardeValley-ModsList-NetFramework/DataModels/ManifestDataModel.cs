@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StardeValley_ModsList_NetFramework.DataModels
+namespace StardewValleyModList.DataModels
 {
     public class ManifestDataModel
     {

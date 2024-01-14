@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{618A384F-1E28-43AF-AEC2-A0AC1AC8171F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>StardeValley_ModsList_NetFramework</RootNamespace>
-    <AssemblyName>StardeValley-ModsList-NetFramework</AssemblyName>
+    <RootNamespace>StardewValleyModList</RootNamespace>
+    <AssemblyName>StardewValley-ModsList-NetFramework</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -68,14 +68,21 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="OtherPlayerData.xaml">
+    <Page Include="Pages\MyModsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\OtherPlayerDataPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OtherPlayerData.xaml.cs">
-      <DependentUpon>OtherPlayerData.xaml</DependentUpon>
+    <Compile Include="Pages\MyModsPage.xaml.cs">
+      <DependentUpon>MyModsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OtherPlayerDataPage.xaml.cs">
+      <DependentUpon>OtherPlayerDataPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
