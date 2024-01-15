@@ -9,9 +9,9 @@
       Title="OtherPlayerDataPage">
 
     <Grid>
-        <Button x:Name="button_SelectOtherPlayerDataPath" Content="Select Other Player Data" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Width="200" FontSize="15"/>
+        <Button x:Name="button_SelectOtherPlayerDataPath" Content="Select Other Player Data" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Width="200" FontSize="15" Click="button_SelectOtherPlayerDataPath_Click"/>
         <TextBox x:Name="textbox_OtherPlayerDataPath" IsEnabled="False" Margin="10,41,10,0" TextWrapping="Wrap" Text="JSON Path" VerticalContentAlignment="Center" VerticalAlignment="Top" Height="30" FontSize="15"/>
-        <DataGrid Margin="10,76,10,10">
+        <DataGrid x:Name="datagrid_OtherPlayerData" Margin="10,76,10,10">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="FontWeight" Value="Medium"/>
@@ -21,11 +21,12 @@
             </DataGrid.Resources>
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Mod Name" Width="100" CanUserSort="True" CanUserResize="True"/>
-                <DataGridTextColumn Header="Author" Width="100" CanUserSort="True" CanUserResize="True"/>
-                <DataGridTextColumn Header="Description" Width="250" CanUserSort="True" CanUserResize="True"/>
-                <DataGridTextColumn Header="Minimum Version" Width="120" CanUserSort="True" CanUserResize="True"/>
-                <DataGridTextColumn Header="SMAPI Link" Width="*" CanUserSort="True" CanUserResize="True"/>
+                <DataGridTextColumn Header="Mod Name" Width="100" CanUserSort="True" CanUserResize="True" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Author" Width="70" CanUserSort="True" CanUserResize="True" Binding="{Binding Author}"/>
+                <DataGridTextColumn Header="Description" Width="200" CanUserSort="True" CanUserResize="True" Binding="{Binding Description}"/>
+                <DataGridTextColumn Header="Nexus Mods" Width="*" CanUserSort="True" CanUserResize="True" Binding="{Binding NexusLink}"/>
+                <DataGridTextColumn Header="Github" Width="*" CanUserSort="True" CanUserResize="True" Binding="{Binding GithubLink}"/>
+                <DataGridTextColumn Header="SMAPI Link" Width="*" CanUserSort="True" CanUserResize="True" Binding="{Binding SMAPILink}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
