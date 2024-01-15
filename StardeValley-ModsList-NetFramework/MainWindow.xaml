@@ -7,15 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280">
     <Grid>
-        <TabControl FontSize="15" Margin="10,0,10,10">
-            <TabItem x:Name="header_MyMods" Header="My Mods" Width="150" IsSelected="True" />
-            <TabItem x:Name="header_OtherPlayerMods" Header="Other Player" Width="150"/>
-            <TabItem x:Name="header_ModsComparison" Header="Mod Compare" Width="150"/>
-
+        <TabControl FontSize="15" Margin="10,0,10,10" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem x:Name="header_MyMods" Header="My Mods" Width="150" TabIndex="0">
+                <Frame x:Name="myModsFrame"/>
+            </TabItem>
+            <TabItem x:Name="header_OtherPlayerMods" Header="Other Player" Width="150" TabIndex="1">
+                <Frame x:Name="otherPlayerModsFrame"/>
+            </TabItem>
+            <TabItem x:Name="header_ModsComparison" Header="Non Exist Mods" Width="150" TabIndex="2">
+                <Frame x:Name="modsComparisonFrame"/>
+            </TabItem>
         </TabControl>
-
-        <Frame x:Name="MainContent" Margin="0,30,20,10">
-
-        </Frame>
     </Grid>
 </Window>

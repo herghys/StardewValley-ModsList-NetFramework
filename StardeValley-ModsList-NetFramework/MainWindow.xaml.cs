@@ -21,23 +21,25 @@ namespace StardewValleyModList
     /// </summary>
     public partial class MainWindow : Window
     {
-        MyModsPage myModsPage = new MyModsPage();
-        OtherPlayerModsPage otherPlayerModsPage = new OtherPlayerModsPage();
+        MyModsPage myModsPage = new();
+        OtherPlayerModsPage otherPlayerModsPage = new();
+        ModsComparisonPage modsComparisonPage = new();
 
         public MainWindow()
         {
             InitializeComponent();
-            OpenMyModsPage();
+            InitializeFrame();
         }
 
-        private void OpenMyModsPage()
+        private void InitializeFrame()
         {
-            MainContent.Content = myModsPage;
-        }
+            myModsPage = new();
+            otherPlayerModsPage = new();
+            modsComparisonPage = new();
 
-        private void OpenOtherPage()
-        {
-            MainContent.Content = otherPlayerModsPage;
+            myModsFrame.Content = myModsPage;
+            otherPlayerModsFrame.Content = otherPlayerModsPage;
+            modsComparisonFrame.Content = modsComparisonPage;
         }
     }
 }

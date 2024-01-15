@@ -23,10 +23,11 @@ namespace StardewValleyModList.Pages
     /// </summary>
     public partial class ModsComparisonPage : Page
     {
-        List<ModsDataModel> comparedData = new List<ModsDataModel>();
+        List<ModsDataModel> comparedData = new();
         public ModsComparisonPage()
         {
             InitializeComponent();
+            EventSubs();
         }
 
         private void EventSubs()
@@ -42,9 +43,9 @@ namespace StardewValleyModList.Pages
         public void Populate()
         {
             comparedData.Clear();
-            comparedData = new List<ModsDataModel>();
-            List<ModsDataModel> myData = new List<ModsDataModel>();
-            List<ModsDataModel> otherPlayerData = new List<ModsDataModel>();
+            comparedData = new();
+            List<ModsDataModel> myData = new();
+            List<ModsDataModel> otherPlayerData = new();
 
             if (Globals.MyMods.Count != 0)
             {
